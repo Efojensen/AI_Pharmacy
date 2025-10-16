@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    --color-cyanText: #04B4FC;
+    --color-nameGrey: #404040;
+    --color-footerGrey: #767676;
+    --color-unimportant: #565656;
+    --color-inactiveGrey: #9CA0B2;
+    --color-someBlueColor: #101828;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.navBar {
+    @apply flex h-20 w-full py-5 px-[3.94rem] justify-between items-center
+}
+
+.searchBox {
+    @apply flex w-full h-16 border-cyanText rounded-[10px] border-[1px] p-5 items-center my-[1.375rem]
+}
+
+.pharmacyNotificationsTile {
+    @apply flex h-[17rem] gap-x-[1.625rem] items-center justify-start min-w-[17.1875rem]
+}
