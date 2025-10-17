@@ -1,0 +1,30 @@
+import Image from 'next/image'
+import SidebarTile from './SidebarTile'
+
+const Sidebar = () => {
+    return (
+        <aside className='sideBar'>
+            <div className='mt-[2.3125rem] flex gap-x-[0.375rem] items-center mb-[2.6875rem] ml-[1.28375rem]'>
+                <Image
+                    width={37}
+                    height={35}
+                    alt='company_logo'
+                    src='/svgs/mortar.svg'
+                />
+                <h1 className='text-xl text-black font-normal'>
+                    AI PHARMACY
+                </h1>
+            </div>
+
+            <p className='text-sm leading-[1.125rem] font-normal ml-4 mb-[0.625rem] text-sideBarGrey'>Home</p>
+            <div className='flex flex-col gap-y-[1.25rem] ml-1'>
+                <SidebarTile icon='/svgs/dashboard.svg' text='Overview' active={true} />
+                <SidebarTile icon='/svgs/inventory.svg' text='Inventory' active={false} />
+                <SidebarTile icon='/svgs/upload.svg' text='Upload' active={false} />
+                <SidebarTile icon='/svgs/team.svg' text='Team' active={false} />
+            </div>
+        </aside>
+    )
+}
+
+export default Sidebar

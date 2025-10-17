@@ -11,8 +11,8 @@ const PharmacyNotificationsTile: React.FC<pharmacyNotificationsTileProps> = ({ i
     return (
         <div className='pharmacyNotificationsTile'>
             <Image
-                width={28}
-                height={28}
+                width={22}
+                height={22}
                 src='/svgs/bell.svg'
                 alt='notification_bell'
             />

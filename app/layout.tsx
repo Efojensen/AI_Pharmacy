@@ -1,4 +1,5 @@
 import NavBar from "@components/NavBar";
+import Sidebar from "@components/Sidebar";
 import "@styles/globals.css"
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -23,10 +24,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
-        <NavBar/>
-        {children}
+        <div className="app-container">
+          <Sidebar/>
+          <div className="main-content">
+            <NavBar/>
+            <main className="page-content">
+              {children}
+            </main>
+          </div>
+        </div>
       </body>
     </html>
   );

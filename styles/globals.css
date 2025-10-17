@@ -10,6 +10,7 @@
     --color-nameGrey: #404040;
     --color-footerGrey: #767676;
     --color-unimportant: #565656;
+    --color-sideBarGrey: #83899F;
     --color-inactiveGrey: #9CA0B2;
     --color-someBlueColor: #101828;
     --color-background: var(--background);
@@ -17,17 +18,39 @@
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
-
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
     }
-}
+} */
 
 body {
     background: var(--background);
     color: var(--foreground);
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-content {
+    @apply flex-1 overflow-auto
+}
+
+/* Ensure the sidebar takes full height */
+.sidebar {
+    height: 100vh;
 }
 
 .navBar {
@@ -35,9 +58,13 @@ body {
 }
 
 .searchBox {
-    @apply flex w-full h-16 border-cyanText rounded-[10px] border-[1px] p-5 items-center my-[1.375rem]
+    @apply flex w-full h-16 border-cyanText rounded-[10px] border-[1px] p-5 items-center my-[1.375rem] mr-[12.375rem]
 }
 
 .pharmacyNotificationsTile {
-    @apply flex h-[17rem] gap-x-[1.625rem] items-center justify-start min-w-[17.1875rem]
+    @apply flex h-[4rem] gap-x-[1.825rem] items-center justify-start min-w-[17.1875rem]
+}
+
+.sideBar {
+    @apply flex flex-col h-full w-[17.5rem]
 }
