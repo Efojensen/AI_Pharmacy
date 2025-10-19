@@ -1,6 +1,8 @@
 import Image from 'next/image'
-import DatePopulateGraph from "@components/drugOverview/DatePopulateGraph";
 import CustomPieChart from '@components/charts/PieChart';
+import { months } from '@components/pharmacistOverview/constants';
+import MonthButton from '@components/pharmacistOverview/MonthButton';
+import DatePopulateGraph from "@components/drugOverview/DatePopulateGraph";
 
 const date = new Date()
 
@@ -24,6 +26,17 @@ const DrugOverview = () => {
             />
 
             <CustomPieChart/>
+
+            <div className='flex max-w-[22.5rem] h-[1.9375rem] overflow-x-scroll'>
+                {
+                    months.map((month, idx) => (
+                        <MonthButton
+                            key={idx}
+                            month={month}
+                        />
+                    ))
+                }
+            </div>
         </section>
     )
 }

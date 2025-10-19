@@ -8,6 +8,7 @@
 @theme inline {
     --color-cyanText: #04B4FC;
     --color-nameGrey: #404040;
+    --color-activeBtn: #0077B6;
     --color-footerGrey: #767676;
     --color-unimportant: #565656;
     --color-sideBarGrey: #83899F;
@@ -15,13 +16,14 @@
     --color-statTileSvgBg: #DBEAFE;
     --color-someBlueColor: #101828;
     --color-drugOverviewClr: #023E8A;
-    --color-drugOverviewGrey: #636363
+    --color-drugOverviewGrey: #636363;
     --color-statTileDescText: #6A7282;
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
+
 /*
 @media (prefers-color-scheme: dark) {
     :root {
@@ -50,6 +52,10 @@ body {
     overflow: hidden;
 }
 
+.roboto-font {
+    font-family: var(--font-roboto);
+}
+
 .page-content {
     @apply flex-1 overflow-auto
 }
@@ -72,7 +78,7 @@ body {
 }
 
 .sideBar {
-    @apply flex flex-col h-full w-[17.5rem]
+    @apply flex flex-col h-full w-[17.5rem] bg-[#FFF]
 }
 
 .statTile {
@@ -85,4 +91,8 @@ body {
 
 .drugPharmacistOverview {
     @apply flex flex-col w-[22.5rem] h-[37.5625rem] p-[1.5625rem] items-center bg-[#FFF]
+}
+
+.monthButton {
+    @apply flex px-4 py-[9px] justify-center items-center font-bold leading-[0.005rem] rounded-[50px] bg-white text-black border-2 text-[0.6875rem] border-black border-solid active:bg-activeBtn active:text-white uppercase
 }
