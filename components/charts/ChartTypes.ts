@@ -4,3 +4,9 @@ export interface LineChartType {
     pv: number
     amt: number
 }
+
+export interface PieChartType {
+    name: string
+    value: number
+    color: string
+}

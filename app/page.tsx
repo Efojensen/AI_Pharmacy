@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <StatTileRow/>
         <div className='flex'>
-          <div className='flex w-[62.4375rem] bg-blue-700'>
+          <div className='flex w-[62.4375rem]'>
           </div>
           <DrugOverview/>
         </div>

@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import DatePopulateGraph from "@components/drugOverview/DatePopulateGraph";
+import CustomPieChart from '@components/charts/PieChart';
 
 const date = new Date()
 
 const DrugOverview = () => {
     return (
-        <section className='drugOverview'>
+        <section className='drugPharmacistOverview'>
             <h2 className='mb-[1.5625rem] font-medium text-[1.1875rem] leading-[1.71875rem] flex items-center'>
                 <Image
                     width={24}
@@ -21,6 +22,8 @@ const DrugOverview = () => {
                 someDate={date}
                 something={56}
             />
+
+            <CustomPieChart/>
         </section>
     )
 }

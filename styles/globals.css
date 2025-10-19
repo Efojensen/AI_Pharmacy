@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
+    --background: #F9FAFB;
     --foreground: #171717;
 }
 
@@ -44,6 +44,8 @@ body {
 .main-content {
     flex: 1;
     display: flex;
+    margin: 0, 0;
+    padding: 0, 0;
     flex-direction: column;
     overflow: hidden;
 }
@@ -81,6 +83,6 @@ body {
     @apply flex gap-x-[4.6875rem] mb-[3.5625rem]
 }
 
-.drugOverview {
-    @apply flex flex-col w-[22.5rem] h-[37.5625rem] p-[1.5625rem] right-0
+.drugPharmacistOverview {
+    @apply flex flex-col w-[22.5rem] h-[37.5625rem] p-[1.5625rem] items-center bg-[#FFF]
 }

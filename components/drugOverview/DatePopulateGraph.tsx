@@ -8,12 +8,12 @@ interface DatePopulateGraphProps {
 
 const DatePopulateGraph: React.FC<DatePopulateGraphProps> = ({ someDate, something }) => {
     return (
-        <div className='flex justify-between'>
-            <div className='flex flex-col'>
+        <div className='flex justify-between items-center h-[2.9375rem] mb-[1.5625rem]'>
+            <div className='flex flex-col justify-between'>
                 <span className="text-drugOverviewGrey text-[0.8125rem] leading-[1.5rem] tracking-[-0.01625rem]">  {someDate.toLocaleDateString('en-US', { month: 'long' })}, {someDate.getDate()}</span>
                 <span className='text-[0.9375rem] font-medium leading-[1.40625rem] tracking-[-0.01875rem]'>More densely populate</span>
             </div>
-            <div className='flex flex-col h-[2.9375rem] items-start'>
+            <div className='flex flex-col items-start'>
                 <span className='text-drugOverviewClr flex'>
                     <Image
                         width={9}
