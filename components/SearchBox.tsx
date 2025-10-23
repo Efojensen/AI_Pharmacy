@@ -19,6 +19,7 @@ const SearchBox = ({ placeholder }: { placeholder: string }) => {
             <input
                 value={inputText}
                 placeholder={placeholder}
+                className='w-full h-[2rem] border-none focus:outline-none focus:ring-0'
                 onChange={(e) => setInputText(e.target.value)}
             />
 
