@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import LineChartPlot from "@components/charts/lineChartPlot"
+import { LineChartPlot } from "@components/charts/lineChartPlot"
 
 interface DatePopulateGraphProps {
     someDate: Date

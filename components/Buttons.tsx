@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 interface ButtonProps {
     icon?: string
-    label: string
+    label?: string
+    className?: string
 }
 
 export const NormalButton:React.FC<ButtonProps> = ({ label, icon }) => {
@@ -58,6 +59,19 @@ export const FilledButton:React.FC<ButtonProps> = ({ label, icon }) => {
                 )
             }
             {label}
+        </button>
+    )
+}
+
+export const BlueOutlinedButton: React.FC<ButtonProps> = ({ icon, className }) => {
+    return (
+        <button className={`flex bg-buttonBgColor size-[2.5rem] hover:cursor-pointer items-center justify-center ${className}`}>
+            <Image
+                width={18}
+                height={20}
+                src={icon!}
+                alt={icon!.slice(5)}
+            />
         </button>
     )
 }

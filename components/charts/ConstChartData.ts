@@ -1,0 +1,55 @@
+import { LineChartType } from "./ChartTypes";
+
+export const sampleData: LineChartType[] = [
+    { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
+    { name: 'Page B', uv: 3000, pv: 1398, amt: 2210 },
+    // { name: 'Page C', uv: 2000, pv: 9800, amt: 2290 },
+    { name: 'Page D', uv: 2780, pv: 3908, amt: 2000 },
+    { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
+    { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
+    { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
+];
+
+export const firstCardData: LineChartType[] = [
+    { name: 'Day 1', uv: 1200, pv: 900, amt: 1100 },
+    { name: 'Day 2', uv: 3400, pv: 1700, amt: 2900 },
+    { name: 'Day 3', uv: 2100, pv: 3200, amt: 2200 },
+    { name: 'Day 4', uv: 2800, pv: 800, amt: 2500 },
+    { name: 'Day 5', uv: 1500, pv: 2500, amt: 1600 },
+    { name: 'Day 6', uv: 3700, pv: 1200, amt: 3000 },
+    { name: 'Day 7', uv: 1900, pv: 1800, amt: 2000 },
+    { name: 'Day 8', uv: 3100, pv: 700, amt: 2700 },
+    { name: 'Day 9', uv: 2500, pv: 200, amt: 2300 },
+    { name: 'Day 10', uv: 3300, pv: 600, amt: 2600 },
+    { name: 'Day 11', uv: 2200, pv: 700, amt: 2100 },
+    { name: 'Day 12', uv: 2900, pv: 500, amt: 2400 },
+    { name: 'Day 13', uv: 3500, pv: 900, amt: 2700 },
+    { name: 'Day 14', uv: 3000, pv: 1500, amt: 2600 },
+    { name: 'Day 15', uv: 3800, pv: 1000, amt: 3100 },
+    { name: 'Day 16', uv: 3400, pv: 600, amt: 2900 },
+    { name: 'Day 17', uv: 2600, pv: 2100, amt: 2400 },
+    { name: 'Day 18', uv: 3100, pv: 500, amt: 2700 },
+    { name: 'Day 19', uv: 3600, pv: 900, amt: 3000 },
+    { name: 'Day 20', uv: 3300, pv: 700, amt: 2700 },
+    { name: 'Day 21', uv: 2800, pv: 1200, amt: 2500 },
+    { name: 'Day 22', uv: 1900, pv: 2600, amt: 2000 },
+    { name: 'Day 23', uv: 3700, pv: 1400, amt: 3100 },
+];
+
+export const secondCardData: LineChartType[] = [
+    { name: 'Day 1', uv: 800, pv: 1200, amt: 900 },
+    { name: 'Day 2', uv: 1500, pv: 1000, amt: 1300 },
+    { name: 'Day 3', uv: 1900, pv: 800, amt: 1600 },
+    { name: 'Day 4', uv: 1000, pv: 200, amt: 1100 },
+    { name: 'Day 5', uv: 2500, pv: 700, amt: 2000 },
+    { name: 'Day 6', uv: 1700, pv: 800, amt: 1600 },
+    { name: 'Day 7', uv: 2100, pv: 600, amt: 1900 },
+    { name: 'Day 8', uv: 900, pv: 1010, amt: 1000 },
+    { name: 'Day 9', uv: 2000, pv: 500, amt: 1700 },
+    { name: 'Day 10', uv: 1200, pv: 960, amt: 1300 },
+    { name: 'Day 11', uv: 2600, pv: 1100, amt: 2200 },
+    { name: 'Day 12', uv: 1400, pv: 1370, amt: 1500 },
+    { name: 'Day 13', uv: 2300, pv: 900, amt: 2000 },
+    { name: 'Day 14', uv: 1000, pv: 1600, amt: 1200 },
+    { name: 'Day 15', uv: 2700, pv: 700, amt: 2200 },
+];

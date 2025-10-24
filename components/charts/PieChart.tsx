@@ -7,6 +7,7 @@ const CustomLegend = (props) => {
 
     return (
         <div className='flex flex-col w-[19.375rem] mt-[3.65625rem]'>
+            {/* TODO: Make button component */}
             <span className='text-xl font-medium leading-[1.40625rem] justify-between tracking-[-0.025rem]'>List categories</span>
             <div className="grid grid-cols-2 gap-2 mt-4">
                 {payload.map((entry, index) => (
