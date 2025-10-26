@@ -1,5 +1,5 @@
 import NavBar from "@components/NavBar";
-import Sidebar from "@components/Sidebar";
+import Sidebar from "@components/sideBar/Sidebar";
 import "@styles/globals.css"
 import type { Metadata } from "next";
 import { Poppins, Roboto, Inter } from "next/font/google";

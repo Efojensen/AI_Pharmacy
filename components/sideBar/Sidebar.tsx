@@ -17,12 +17,18 @@ const Sidebar = () => {
             </div>
 
             <p className='text-sm leading-[1.125rem] font-normal ml-4 mb-[0.625rem] text-sideBarGrey'>Home</p>
-            <div className='flex flex-col gap-y-[1.25rem] ml-1'>
-                <SidebarTile icon='/svgs/dashboard.svg' text='Overview' active={true} />
-                <SidebarTile icon='/svgs/inventory.svg' text='Inventory' active={false} />
+            <nav className='flex flex-col gap-y-[1.25rem] ml-1'>
+                <SidebarTile icon='/svgs/dashboard.svg' text='Overview' active={false} />
+                <SidebarTile
+                    icon='/svgs/inventory.svg'
+                    text='Inventory'
+                    active={true}
+                    dropdownArrow='/svgs/dropdown.svg'
+                    dropdownItems={['Database', 'Statistics', 'Pending Approvals']}
+                />
                 <SidebarTile icon='/svgs/upload.svg' text='Upload' active={false} />
                 <SidebarTile icon='/svgs/team.svg' text='Team' active={false} />
-            </div>
+            </nav>
         </aside>
     )
 }
