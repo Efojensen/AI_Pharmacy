@@ -10,8 +10,8 @@ interface SubSidebarTileProps {
 export const SubSidebarTile: React.FC<SubSidebarTileProps> = ({ text, active, index, last }) => {
     return (
         <li className={`
-            flex items-center gap-x-[0.75rem] py-[.6375rem] pl-[2rem] pr-[0.75rem] font-semibold
-            cursor-pointer text-sm transition-colors rounded-[0.75rem] text-black mx-[.25rem]
+            flex items-center gap-x-[0.75rem] py-[.8375rem] pl-[2rem] pr-[0.75rem] font-semibold
+            cursor-pointer text-sm transition-colors rounded-[0.75rem] text-black
             ${active ?
                 'bg-someBlueColor text-cyanText'
                 :

@@ -40,7 +40,7 @@ export const SubSidebarConnector: React.FC<SubSideBarConnectorProps> = ({ index,
 
 export const PipeConnector = () => {
     return (
-        <span className='my-[-.6375rem]'>
+        <span className='my-[-.8375rem]'>
             |
         </span>
     )

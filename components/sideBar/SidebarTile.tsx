@@ -13,8 +13,9 @@ interface SidebarTileProps {
 }
 
 const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownArrow, dropdownItems }) => {
+    // To be studied
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-    const [activeSubItem, setActiveSubItem] = useState<number | null>(null) //AI
+    const [activeSubItem, setActiveSubItem] = useState<number | null>(null)
 
     const handleClick = () => {
         if (dropdownArrow) {
@@ -22,8 +23,8 @@ const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownA
         }
     }
 
-    const handleSubItemClick = (index: number) => { //AI
-        setActiveSubItem(activeSubItem === index ? null : index) //AI
+    const handleSubItemClick = (index: number) => {
+        setActiveSubItem(activeSubItem === index ? null : index)
     }
 
     return (
@@ -65,9 +66,11 @@ const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownA
             {/* Dropdown Items - rendered as siblings */}
             <div className="mt-[-0.5rem]">
                 {isDropdownOpen && dropdownItems && dropdownItems.map((itemText, index) => (
-                    <div onClick={() => handleSubItemClick(index)}> //AI
+                    <div
+                    key={index}
+                    onClick={() => handleSubItemClick(index)}
+                    >
                         <SubSidebarTile
-                            key={index}
                             index={index}
                             text={itemText}
                             active={activeSubItem === index} //AI
