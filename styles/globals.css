@@ -12,6 +12,7 @@
     --color-approved: ##ECFDF3;
     --color-rejected: ##FFCFD1;
     --color-activeBtn: #0077B6;
+    --color-lightGrey: #CBCBCB;
     --color-footerGrey: #767676;
     --color-unimportant: #565656;
     --color-sideBarGrey: #83899F;
@@ -24,9 +25,11 @@
     --color-statTileSvgBg: #DBEAFE;
     --color-someBlueColor: #101828;
     --color-dbButtonColor: #344054;
+    --color-browseImgColor: #448DF2;
     --color-drugOverviewClr: #023E8A;
     --color-drugOverviewGrey: #636363;
     --color-statTileDescText: #6A7282;
+    --color-dashedBorderColor: #9D9D9D;
     --color-databaseBorderColor: #EAECF0;
     --color-outlinedBtnBorderClr: #D0D5DD;
     --color-pharmacistOverviewText: #383838;
@@ -131,4 +134,8 @@ body {
 
 .tableCellHead {
     @apply grid grid-flow-col auto-cols-max items-center gap-[4.0625rem];
+}
+
+.upload {
+    @apply flex flex-col mt-[6.5rem] mx-[3.375rem] mb-[8.1875rem]
 }

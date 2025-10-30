@@ -6,9 +6,9 @@ interface ButtonProps {
     className?: string
 }
 
-export const NormalButton:React.FC<ButtonProps> = ({ label, icon }) => {
+export const NormalButton:React.FC<ButtonProps> = ({ label, icon, className }) => {
     return (
-        <button className='normalButton inter-font'>
+        <button className={`normalButton inter-font ${className}`}>
             {
                 icon && (
                     <Image
@@ -25,9 +25,9 @@ export const NormalButton:React.FC<ButtonProps> = ({ label, icon }) => {
     )
 }
 
-export const OutlinedButton:React.FC<ButtonProps> = ({ label, icon }) => {
+export const OutlinedButton:React.FC<ButtonProps> = ({ label, icon, className }) => {
     return (
-        <button className='outlinedButton'>
+        <button className={`outlinedButton inter-font ${className}`}>
             {
                 icon && (
                     <Image
@@ -44,9 +44,9 @@ export const OutlinedButton:React.FC<ButtonProps> = ({ label, icon }) => {
     )
 }
 
-export const FilledButton:React.FC<ButtonProps> = ({ label, icon }) => {
+export const FilledButton:React.FC<ButtonProps> = ({ label, icon, className }) => {
     return (
-        <button className='filledButton'>
+        <button className={`filledButton inter-font ${className}`}>
             {
                 icon && (
                     <Image
@@ -65,7 +65,7 @@ export const FilledButton:React.FC<ButtonProps> = ({ label, icon }) => {
 
 export const BlueOutlinedButton: React.FC<ButtonProps> = ({ icon, className }) => {
     return (
-        <button className={`flex bg-buttonBgColor size-[2.5rem] hover:cursor-pointer items-center justify-center ${className}`}>
+        <button className={`flex bg-buttonBgColor size-[2.5rem] hover:cursor-pointer items-center justify-center ${className} inter-font`}>
             <Image
                 width={18}
                 height={20}

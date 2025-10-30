@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Card from '@components/Card'
-import { FilledButton, NormalButton, OutlinedButton } from '@components/Buttons'
 import { drugs } from './constants';
 import StatusTile from '@components/StatusTile';
+import { FilledButton, NormalButton, OutlinedButton } from '@components/Buttons'
 
 const Database = () => {
     const arrowDown = '/svgs/database/arrow-down.svg'
