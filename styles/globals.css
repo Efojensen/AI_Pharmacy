@@ -19,18 +19,21 @@
     --color-pendingText: #364254;
     --color-inactiveGrey: #9CA0B2;
     --color-approvedText: #037847;
+    --color-teamPharmacy: #6C7172;
     --color-rejectedText: #8F130A;
     --color-databaseDesc: #667085;
     --color-buttonBgColor: #E3FAFF;
     --color-statTileSvgBg: #DBEAFE;
     --color-someBlueColor: #101828;
     --color-dbButtonColor: #344054;
+    --color-teamGroupColor: #D5D6D7;
     --color-browseImgColor: #448DF2;
     --color-drugOverviewClr: #023E8A;
     --color-drugOverviewGrey: #636363;
     --color-statTileDescText: #6A7282;
     --color-dashedBorderColor: #9D9D9D;
     --color-databaseBorderColor: #EAECF0;
+    --color-teamMemberTileColor: #ECEFFF;
     --color-outlinedBtnBorderClr: #D0D5DD;
     --color-pharmacistOverviewText: #383838;
     --color-background: var(--background);
@@ -112,21 +115,24 @@ body {
     @apply flex flex-col w-[22.5rem] h-[37.5625rem] p-[1.5625rem] items-center bg-[#FFF]
 }
 
+@layer components {
+    .outlinedButton {
+        @apply flex py-[0.625rem] px-[1rem] items-center justify-center text-dbButtonColor leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] border-[0.0625rem] border-outlinedBtnBorderClr rounded-[0.5rem] hover:cursor-pointer;
+    }
+
+    .normalButton {
+        @apply flex py-[0.625rem] px-[1rem] items-center justify-center text-dbButtonColor leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] hover:cursor-pointer
+    }
+
+    .filledButton {
+        @apply flex py-[0.625rem] px-[1rem] items-center justify-center leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] border-[0.0625rem] border-outlinedBtnBorderClr rounded-[0.5rem] bg-cyanText text-white hover:cursor-pointer
+    }
+}
+
 .monthButton {
     @apply flex px-4 py-[9px] justify-center items-center font-bold leading-[0.005rem] rounded-[50px] bg-white text-black border-2 text-[0.6875rem] border-black border-solid active:bg-activeBtn active:text-white uppercase
 }
 
-.normalButton {
-    @apply flex py-[0.625rem] px-[1rem] items-center justify-center text-dbButtonColor leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] hover:cursor-pointer
-}
-
-.outlinedButton {
-    @apply flex py-[0.625rem] px-[1rem] items-center justify-center text-dbButtonColor leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] border-[0.0625rem] border-outlinedBtnBorderClr rounded-[0.5rem] hover:cursor-pointer
-}
-
-.filledButton {
-    @apply flex py-[0.625rem] px-[1rem] items-center justify-center leading-[1.25rem] font-medium text-[0.875rem] gap-x-[0.5rem] border-[0.0625rem] border-outlinedBtnBorderClr rounded-[0.5rem] bg-cyanText text-white hover:cursor-pointer
-}
 
 .tableCell {
     @apply px-[0.75rem] py-[1rem] text-databaseDesc border-b-[1px] border-databaseBorderColor
@@ -138,4 +144,8 @@ body {
 
 .upload {
     @apply flex flex-col mt-[6.5rem] mx-[3.375rem] mb-[8.1875rem]
+}
+
+.teamTile {
+    @apply flex flex-col pt-[2.9375rem] items-center rounded-[1rem] border-solid
 }
