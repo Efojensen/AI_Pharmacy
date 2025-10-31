@@ -19,8 +19,8 @@ const DatePopulateGraph: React.FC<DatePopulateGraphProps> = ({ someDate, somethi
                         width={9}
                         height={8}
                         alt='arrow'
-                        src='/svgs/arrow.svg'
                         className='mr-[0.1875rem]'
+                        src='/svgs/root/arrow.svg'
                     />
                     {something}%
                 </span>

@@ -3,8 +3,8 @@ import { BlueOutlinedButton } from "@components/Buttons";
 import StatTileRow from "@components/statusTile/StatTileRow";
 import DrugsUploadedTile from "@components/DrugsUploadedTile";
 import DrugOverview from "@components/drugOverview/DrugOverview";
-import PharmacistOverview from "@components/pharmacistOverview/PharmacistOverview";
 import { CurvedLinePlot, LinearLinePlot } from "@components/charts/lineChartPlot";
+import PharmacistOverview from "@components/pharmacistOverview/PharmacistOverview";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
                 <div className='flex w-full justify-between'>
                   <h2 className='font-bold text-[1.75rem] leading-[2.5rem]'>Uploads over time</h2>
                   <BlueOutlinedButton
-                    icon="/svgs/share.svg"
+                    icon="/svgs/root/share.svg"
                     className='rounded-full'
                   />
                 </div>
@@ -39,7 +39,7 @@ export default function Home() {
                   title='Total Drugs Uploaded'
                 />
                 <BlueOutlinedButton
-                  icon='/svgs/analytics.svg'
+                  icon='/svgs/root/analytics.svg'
                 />
               </div>
               <LinearLinePlot/>

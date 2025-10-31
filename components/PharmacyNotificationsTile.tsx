@@ -13,8 +13,8 @@ const PharmacyNotificationsTile: React.FC<pharmacyNotificationsTileProps> = ({ i
             <Image
                 width={22}
                 height={22}
-                src='/svgs/bell.svg'
                 alt='notification_bell'
+                src='/svgs/nav/bell.svg'
             />
 
             <div className='rounded-full size-16'>

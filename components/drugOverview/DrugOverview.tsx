@@ -12,7 +12,7 @@ const DrugOverview = () => {
                     width={24}
                     height={24}
                     alt='overview_icon'
-                    src='/svgs/overview.svg'
+                    src='/svgs/root/overview.svg'
                     className='mr-[0.625rem] size-[1.5rem]'
                 />
                 Drug Categories Overview

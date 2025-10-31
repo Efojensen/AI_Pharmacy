@@ -12,7 +12,7 @@ const SearchBox = ({ placeholder }: { placeholder: string }) => {
                 width={24}
                 height={24}
                 alt='search_icon'
-                src='/svgs/search-normal.svg'
+                src='/svgs/nav/search-normal.svg'
                 className='mr-[1.375rem]'
             />
 

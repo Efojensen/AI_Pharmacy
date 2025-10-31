@@ -14,7 +14,7 @@ const PharmacistOverview = ({ contributions }: { contributions: number }) => {
                     width={18}
                     height={18}
                     alt='settings'
-                    src='/svgs/settings_2.svg'
+                    src='/svgs/root/settings.svg'
                     className='my-[0.625rem]'
                 />
             </div>
