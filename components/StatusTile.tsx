@@ -12,7 +12,7 @@ const StatusTile = ({ status }: { status: 'Approved' | 'Rejected' | 'Pending' })
 
     return (
         <div className={`
-            flex inter-font text-[0.75rem] font-medium leading-[1.125rem] max-w-[5.25rem]
+            flex inter-font text-[0.8rem] font-medium leading-[1.125rem] max-w-[5.25rem]
             rounded-[1rem] py-[0.125rem] pr-[0.5rem] pl-[0.375rem] ${statusStyles(status)}`
         }>
             • {status}

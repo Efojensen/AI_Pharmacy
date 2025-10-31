@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { SubSidebarTile } from './SubSidebarTile'
@@ -7,12 +8,15 @@ import { SubSidebarTile } from './SubSidebarTile'
 interface SidebarTileProps {
     icon: string
     text: string
+    href?: string
     active: boolean
+    onClick: () => void
     dropdownArrow?: string
     dropdownItems?: string[]
+    dropdownLinks?: string[]
 }
 
-const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownArrow, dropdownItems }) => {
+const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownArrow, dropdownItems, dropdownLinks, href, onClick }) => {
     // To be studied
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [activeSubItem, setActiveSubItem] = useState<number | null>(null)
@@ -28,8 +32,9 @@ const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownA
     }
 
     return (
-        <>
-            <li
+        <div onClick={onClick}>
+            <Link
+                href={href ?? ''}
                 className={`
                     flex items-center gap-x-[1.1875rem] py-[0.6375rem] pl-[1rem] pr-[0.75rem] font-semibold
                     cursor-pointer text-sm transition-colors rounded-[0.625rem] text-black bg-gradient-to-b mx-[.25rem]
@@ -61,25 +66,28 @@ const SidebarTile: React.FC<SidebarTileProps> = ({ icon, text, active, dropdownA
                         />
                     )
                 }
-            </li>
+            </Link>
+
+            {isDropdownOpen && dropdownItems &&dropdownLinks && dropdownItems && <div className='mb-[0.8rem]'></div>}
 
             {/* Dropdown Items - rendered as siblings */}
             <div className="mt-[-0.5rem]">
-                {isDropdownOpen && dropdownItems && dropdownItems.map((itemText, index) => (
+                {isDropdownOpen && dropdownItems &&dropdownLinks && dropdownItems.map((itemText, index) => (
                     <div
-                    key={index}
-                    onClick={() => handleSubItemClick(index)}
+                        key={index}
+                        onClick={() => handleSubItemClick(index)}
                     >
                         <SubSidebarTile
                             index={index}
                             text={itemText}
+                            href={dropdownLinks[index]}
                             active={activeSubItem === index} //AI
                             last={index === dropdownItems.length - 1}
                         />
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 
